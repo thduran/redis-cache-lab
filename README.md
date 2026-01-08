@@ -52,6 +52,9 @@ Open the browser: `http://localhost:5000`
 * **Expiration (TTL):**
   * Wait 10 seconds and refresh again. The cache will expire, and the app will hit the slow DB again.
 
+<img width="289" height="176" alt="red1" src="https://github.com/user-attachments/assets/448f49e2-b6d1-4613-8158-7918d539c2fd" />
+<img width="291" height="167" alt="red2" src="https://github.com/user-attachments/assets/361a07e9-9235-431a-8870-d6c90ac5b5bc" />
+
 ## Key DevOps Concepts Applied
 
 * Latency reduction: Reducing response time from seconds to milliseconds improves User Experience (UX) and SEO.
@@ -114,6 +117,9 @@ Abra o navegador: `http://localhost:5000`
 
 * **Expiração (TTL):**
   * Espere 10s e atualize a página novamente. O cache vai expirar e a aplicação voltará a consultar o banco de dados "lento".
+
+<img width="289" height="176" alt="red1" src="https://github.com/user-attachments/assets/448f49e2-b6d1-4613-8158-7918d539c2fd" />
+<img width="291" height="167" alt="red2" src="https://github.com/user-attachments/assets/361a07e9-9235-431a-8870-d6c90ac5b5bc" />
 
 ## Conceitos chave de DevOps aplicados
 
