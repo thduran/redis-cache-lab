@@ -1,3 +1,5 @@
+Para PT-BR, [clique aqui](#pt-br)
+
 # Redis Cache Strategy
 
 ## Project Overview
@@ -6,7 +8,7 @@ This project is a Proof of Concept (PoC) demonstrating how to implement a **cach
 
 It simulates a "high latency" scenario (common in legacy SQL databases or complex queries) and solves it using **Redis** with the **cache-aside** pattern.
 
-### The Goal
+## The Goal
 
 To demonstrate the performance difference between:
 * **Direct database access:** High latency (~3 seconds per request).
@@ -58,7 +60,8 @@ Open the browser: `http://localhost:5000`
 
 ---
 
-PTBR
+<a name="pt-br"></a>
+PT-BR
 
 # Estratégia Redis com Cache
 
@@ -68,7 +71,7 @@ Este projeto é um PoC que demonstra como implementar uma **camada de cache** pa
 
 Simula um cenário de **alta latência** (comum em banco de dados SQL legados ou em consultas complexas) que é resolvido com **Redis** com o **padrão cache-aside**.
 
-### Objetivo
+## Objetivo
 
 Demonstrar a diferença de performance entre:
 * **Acesso direto ao BD:** alta latência (~3s).
