@@ -20,33 +20,18 @@ The application follows the **cache-aside** strategy:
 4.  **Cache population:** App saves the result in Redis with a **TTL** of 10s
 5.  **Response:** Data is returned to the user.
 
-```mermaid
-graph LR
-    User((User)) -- "GET /" --> App[Python Flask App]
-    
-    subgraph Infrastructure
-        App -- "1. Check Cache" --> Redis[(Redis In-Memory)]
-        Redis -. "2. Hit (Return Data)" .-> App
-        Redis -. "2. Miss (Null)" .-> App
-        
-        App -- "3. Query (if Miss)" --> DB[(Slow Database)]
-        DB -- "4. Return Data (3s latency)" --> App
-        App -- "5. Set Cache + TTL" --> Redis
-    end
-```
-
 ## How to run
 
 ### Prerequisites
 - Docker & Docker Compose
 
-- 1. Start the Environment
+1. Start the Environment
 
 ```bash
 # Builds the Python image and starts Redis
 docker-compose up --build
 ```
-- 2. Test Performance
+2. Test Performance
 
 Open the browser: `http://localhost:5000`
 
@@ -66,9 +51,9 @@ Open the browser: `http://localhost:5000`
 
 ## Key DevOps Concepts Applied
 
-* Latency Reduction: Reducing response time from seconds to milliseconds improves User Experience (UX) and SEO.
-* Database Offloading: By serving 99% of read traffic from Redis, we protect the primary database (MySQL/PostgreSQL) from CPU spikes during high-traffic events (e.g., Black Friday).
-* TTL (Time To Live): Implemented a 10-second expiration policy to ensure data consistency, preventing the cache from serving stale data indefinitely.
+* Latency reduction: Reducing response time from seconds to milliseconds improves User Experience (UX) and SEO.
+* Database offloading: By serving 99% of read traffic from Redis, we protect the primary database (MySQL/PostgreSQL) from CPU spikes during high-traffic events (e.g., Black Friday).
+* TTL: Implemented a 10-second expiration policy to ensure data consistency, preventing the cache from serving stale data indefinitely.
 
 ---
 
@@ -101,13 +86,13 @@ A aplicação usa o padrão **cache-aside**:
 ### Pré-requisitos
 - Docker & Docker Compose
 
-- 1. Provisione o ambiente
+1. Provisione o ambiente
 
 ```bash
 # Build da imagem do Python e inicia o Redis
 docker-compose up --build
 ```
-- 2. Teste de desempenho
+2. Teste de desempenho
 
 Abra o navegador: `http://localhost:5000`
 
